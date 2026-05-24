@@ -1,463 +1,653 @@
-<!-- =========================================================
-     PORTADA / INICIO
-========================================================= -->
-<section id="inicio" class="contenido-seccion d-none">
+<!DOCTYPE html>
+<html lang="es">
 
-    <div class="card shadow-lg border-0 mb-5">
-        <div class="card-body text-center p-5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital</title>
 
-            <!-- FOTO / AVATAR -->
-            <img src="imagenes/foto-perfil.png"
-                 alt="Foto del estudiante"
-                 class="img-fluid rounded-circle shadow mb-4"
-                 style="width: 200px; height: 200px; object-fit: cover;">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-            <!-- DATOS PRINCIPALES -->
-            <h2 class="display-5 fw-bold">
-                Nombre Completo del Estudiante
-            </h2>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="estilosPortafolio.css">
+</head>
 
-            <p class="lead mb-1">
-                Programa Académico
+<body>
+
+    <header class="bg-dark text-white text-center py-4 shadow">
+        <div class="container">
+            <span class="badge rounded-pill bg-light text-dark mb-3 px-3 py-2">Plantilla editable de portafolio</span>
+
+            <h1 class="display-4 fw-bold mb-2">Portafolio Digital</h1>
+
+            <p class="lead mb-0">
+                Nombre del estudiante · Programa · Semestre · Nombre de la materia
             </p>
 
-            <p class="mb-1">
-                Semestre: X Semestre
-            </p>
-
-            <p class="mb-4">
-                Materia: Nombre de la Materia
-            </p>
-
-            <!-- FRASE -->
-            <blockquote class="blockquote mt-4">
-                <p class="fst-italic">
-                    “Escribe aquí una frase motivacional.”
-                </p>
-            </blockquote>
-
-            <!-- RESUMEN -->
-            <div class="mt-5 text-start">
-                <h3 class="mb-3">
-                    Resumen del Portafolio
-                </h3>
-
-                <p>
-                    En este apartado escribe una breve descripción general
-                    del propósito del portafolio, los contenidos desarrollados
-                    durante el semestre y las competencias adquiridas.
-                </p>
-            </div>
-
+            <nav class="mt-4">
+                <ul class="nav justify-content-center gap-3">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('portada', this)">Portada</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('presentacion', this)">Presentación</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('introduccion', this)">Introducción</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('fase1', this)">Fase 1</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('fase2', this)">Fase 2</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('scratch', this)">Scratch</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('appinventor', this)">App Inventor</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('reflexiones', this)">Reflexiones</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('conclusiones', this)">Conclusiones</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('autoevaluacion', this)">Autoevaluación</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light menu-btn" onclick="mostrarSeccion('referencias', this)">Referencias</button>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-</section>
+    <main class="container my-5">
 
+        <!-- PORTADA / INICIO -->
+        <section id="portada" class="contenido-seccion">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="avatar-placeholder mx-auto mb-3">Foto / Avatar</div>
+                            <p class="text-muted mb-0">Reemplaza esta imagen por tu foto o avatar</p>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="mb-3">Portada / Inicio</h2>
+                            <p class="fs-5 mb-2"><strong>Nombre:</strong> [Escribe tu nombre completo]</p>
+                            <p class="fs-5 mb-2"><strong>Programa:</strong> [Escribe tu programa académico]</p>
+                            <p class="fs-5 mb-2"><strong>Semestre:</strong> [Escribe tu semestre]</p>
+                            <p class="fs-5 mb-4"><strong>Materia:</strong> [Escribe el nombre de la materia]</p>
 
+                            <div class="template-box mb-4">
+                                <strong>Frase motivacional:</strong><br>
+                                “Escribe aquí una frase que te represente o te motive.”
+                            </div>
 
-<!-- =========================================================
-     PRESENTACIÓN PERSONAL
-========================================================= -->
-<section id="presentacion" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Presentación Personal
-    </h2>
-
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <div class="row align-items-center">
-
-                <!-- FOTO -->
-                <div class="col-lg-4 text-center mb-4 mb-lg-0">
-
-                    <img src="imagenes/foto-personal.png"
-                         alt="Foto personal"
-                         class="img-fluid rounded shadow">
-
+                            <div class="template-box">
+                                <strong>Resumen del portafolio:</strong><br>
+                                Escribe aquí un resumen breve de lo que contiene tu portafolio, los temas trabajados y el propósito general del documento.
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- INFORMACIÓN -->
-                <div class="col-lg-8">
+        <!-- PRESENTACIÓN PERSONAL -->
+        <section id="presentacion" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Presentación Personal</h2>
 
-                    <h3 class="mb-3">
-                        Información Académica
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="photo-placeholder mx-auto mb-3">Foto personal</div>
+                            <p class="text-muted">Inserta aquí tu fotografía</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="template-box mb-3">
+                                <strong>Datos académicos:</strong><br>
+                                Programa: [ ]<br>
+                                Semestre: [ ]<br>
+                                Institución: [ ]<br>
+                                Grupo: [ ]
+                            </div>
+
+                            <div class="template-box mb-3">
+                                <strong>Competencias adquiridas:</strong><br>
+                                Describe aquí las habilidades, conocimientos y destrezas que has desarrollado.
+                            </div>
+
+                            <div class="template-box mb-3">
+                                <strong>Expectativas del portafolio:</strong><br>
+                                Explica aquí qué esperas demostrar o fortalecer con este portafolio.
+                            </div>
+
+                            <div class="template-box">
+                                <strong>Redes académicas:</strong><br>
+                                LinkedIn: [enlace]<br>
+                                GitHub: [enlace]<br>
+                                Correo académico: [enlace o dirección]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRODUCCIÓN Y OBJETIVOS -->
+        <section id="introduccion" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Introducción y Objetivos</h2>
+
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="template-box h-100">
+                                <strong>Descripción del portafolio:</strong><br>
+                                Explica aquí qué contiene el portafolio, cómo está organizado y para qué sirve.
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="template-box h-100">
+                                <strong>Propósito pedagógico:</strong><br>
+                                Describe la intención formativa del portafolio y cómo evidencia tu proceso de aprendizaje.
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="template-box h-100">
+                                <strong>Competencias desarrolladas:</strong><br>
+                                Escribe aquí las competencias digitales, creativas, investigativas y comunicativas que has trabajado.
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="template-box h-100">
+                                <strong>Objetivos de aprendizaje del semestre:</strong><br>
+                                Enumera o redacta los objetivos que esperabas alcanzar durante el semestre.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FASE 1 -->
+        <section id="fase1" class="contenido-seccion d-none">
+            <h2 class="text-center mb-4">Fase 1 – Fundamentos del Diseño Digital y Creación de Contenidos</h2>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Reflexion sobre fundamentos de contenidos digitales
                     </h3>
-
-                    <p>
-                        Aquí puedes escribir información relacionada con
-                        tu formación académica, intereses profesionales,
-                        experiencia y áreas de aprendizaje.
-                    </p>
-
-                    <h4 class="mt-4">
-                        Competencias Adquiridas
-                    </h4>
-
-                    <ul>
-                        <li>Competencia 1</li>
-                        <li>Competencia 2</li>
-                        <li>Competencia 3</li>
-                    </ul>
-
-                    <h4 class="mt-4">
-                        Expectativas del Portafolio
-                    </h4>
-
-                    <p>
-                        Explica qué esperas lograr con este portafolio
-                        y cómo aporta a tu crecimiento académico
-                        y profesional.
-                    </p>
-
-                    <h4 class="mt-4">
-                        Redes Académicas
-                    </h4>
-
-                    <a href="#" class="btn btn-primary me-2">
-                        LinkedIn
-                    </a>
-
-                    <a href="#" class="btn btn-primary">
-                        GitHub
-                    </a>
-
+                    <p> Reflexión escrita sobre fundamentos del diseño digital + Principios multimedia de Mayer + Tendencias, Licenciamiento, y ejemplos de buen uso. </p>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAHDxlgS-uE/zP5AZ1cDofxCfJbqHBck_g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                    </div>
                 </div>
-
             </div>
 
-        </div>
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     INTRODUCCIÓN Y OBJETIVOS
-========================================================= -->
-<section id="introduccion" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Introducción y Objetivos
-    </h2>
-
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-3">
-                Descripción del Portafolio
-            </h3>
-
-            <p>
-                Describe aquí el contenido general del portafolio,
-                las actividades realizadas y el enfoque académico
-                desarrollado durante el semestre.
-            </p>
-
-            <h3 class="mt-5 mb-3">
-                Propósito Pedagógico
-            </h3>
-
-            <p>
-                Explica la finalidad educativa del portafolio
-                y cómo contribuye al aprendizaje.
-            </p>
-
-            <h3 class="mt-5 mb-3">
-                Competencias Desarrolladas
-            </h3>
-
-            <ul>
-                <li>Competencia desarrollada 1</li>
-                <li>Competencia desarrollada 2</li>
-                <li>Competencia desarrollada 3</li>
-            </ul>
-
-            <h3 class="mt-5 mb-3">
-                Objetivos de Aprendizaje
-            </h3>
-
-            <ul>
-                <li>Objetivo 1</li>
-                <li>Objetivo 2</li>
-                <li>Objetivo 3</li>
-            </ul>
-
-        </div>
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     REFLEXIONES Y APRENDIZAJES
-========================================================= -->
-<section id="reflexiones" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Reflexiones y Aprendizajes
-    </h2>
-
-    <!-- REFLEXIÓN FASE 1 -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3>
-                Reflexión – Fase 1
-            </h3>
-
-            <p>
-                Describe aquí los aprendizajes obtenidos durante
-                la fase 1, las dificultades encontradas y cómo
-                contribuyó al desarrollo de tus competencias.
-            </p>
-
-        </div>
-    </div>
-
-    <!-- REFLEXIÓN FASE 2 -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3>
-                Reflexión – Fase 2
-            </h3>
-
-            <p>
-                Explica tu experiencia con inteligencia artificial,
-                prompts, programación educativa y herramientas digitales.
-            </p>
-
-        </div>
-    </div>
-
-    <!-- REFLEXIÓN FASE 3 -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3>
-                Reflexión – Scratch
-            </h3>
-
-            <p>
-                Analiza el aprendizaje obtenido mediante Scratch
-                y la programación por bloques.
-            </p>
-
-        </div>
-    </div>
-
-    <!-- REFLEXIÓN FASE 4 -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3>
-                Reflexión – App Inventor
-            </h3>
-
-            <p>
-                Describe el proceso de creación de aplicaciones,
-                el diseño funcional y los aprendizajes obtenidos.
-            </p>
-
-        </div>
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONCLUSIONES
-========================================================= -->
-<section id="conclusiones" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Conclusiones
-    </h2>
-
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-4">
-                Síntesis del Proceso Formativo
-            </h3>
-
-            <p>
-                Resume aquí el desarrollo general del semestre
-                y la evolución académica obtenida.
-            </p>
-
-            <h3 class="mt-5 mb-4">
-                Competencias Consolidadas
-            </h3>
-
-            <ul>
-                <li>Competencia consolidada 1</li>
-                <li>Competencia consolidada 2</li>
-                <li>Competencia consolidada 3</li>
-            </ul>
-
-            <h3 class="mt-5 mb-4">
-                Propuesta de Mejora
-            </h3>
-
-            <p>
-                Explica posibles mejoras para futuras versiones
-                del portafolio o del proceso de aprendizaje.
-            </p>
-
-            <h3 class="mt-5 mb-4">
-                Proyección Profesional
-            </h3>
-
-            <p>
-                Describe cómo aplicarás estos conocimientos
-                en tu vida profesional.
-            </p>
-
-        </div>
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     AUTOEVALUACIÓN
-========================================================= -->
-<section id="autoevaluacion" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Autoevaluación
-    </h2>
-
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-4">
-                Autoevaluación Cuantitativa
-            </h3>
-
-            <p>
-                Calificación personal del desempeño:
-                <strong>___ / 5.0</strong>
-            </p>
-
-            <hr class="my-5">
-
-            <h3 class="mb-4">
-                Autoevaluación Cualitativa
-            </h3>
-
-            <h4 class="mt-4">
-                ¿Qué aprendí?
-            </h4>
-
-            <p>
-                Escribe aquí los principales aprendizajes obtenidos.
-            </p>
-
-            <h4 class="mt-5">
-                ¿Qué mejoraría?
-            </h4>
-
-            <p>
-                Describe aspectos que podrían fortalecerse
-                en el futuro.
-            </p>
-
-            <h4 class="mt-5">
-                ¿Cómo aplico esto en mi vida profesional?
-            </h4>
-
-            <p>
-                Relaciona los conocimientos adquiridos
-                con tu perfil profesional.
-            </p>
-
-        </div>
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     REFERENCIAS Y HERRAMIENTAS
-========================================================= -->
-<section id="referencias" class="contenido-seccion d-none">
-
-    <h2 class="text-center mb-5">
-        Referencias y Herramientas
-    </h2>
-
-    <!-- HERRAMIENTAS -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-4">
-                Herramientas Digitales Utilizadas
-            </h3>
-
-            <ul>
-                <li>Canva</li>
-                <li>Genially</li>
-                <li>Scratch</li>
-                <li>MIT App Inventor</li>
-                <li>Bootstrap</li>
-                <li>HTML, CSS y JavaScript</li>
-                <li>Herramientas de Inteligencia Artificial</li>
-            </ul>
-
-        </div>
-    </div>
-
-    <!-- URLS -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-4">
-                URLs y Plataformas Consultadas
-            </h3>
-
-            <ul>
-                <li>
-                    <a href="#">https://ejemplo.com</a>
-                </li>
-
-                <li>
-                    <a href="#">https://ejemplo2.com</a>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-
-    <!-- APA -->
-    <div class="card shadow mb-5">
-        <div class="card-body">
-
-            <h3 class="mb-4">
-                Referencias Bibliográficas – APA 7
-            </h3>
-
-            <p>
-                Apellido, N. (Año). Título del recurso.
-                Editorial o sitio web.
-                URL
-            </p>
-
-            <p>
-                Apellido, N. (Año). Título del libro o artículo.
-                Editorial.
-            </p>
-
-        </div>
-    </div>
-
-</section>
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Infografia Interactiva
+                    </h3>
+                    <p>Infografia interactiva sobre los componentes de un computador, hecho con ayuda de la IA.</p>
+                    <div style="width: 100%;">
+                        <div style="position: relative; padding-bottom: 200%; padding-top: 0; height: 0;">
+                            <iframe title="Componentes de un Computador" frameborder="0" width="800" height="1600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/6997bfcaf762c35028108b1b" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Video educativo corto
+                    </h3>
+                    <p>Video en base a la presentacion anterior..</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HgiDyEguCLk?si=6AqG0J8-cFuMCOn7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Presentacion Interactiva
+                    </h3>
+                    <p>Presentacion hecha segun un video explicativo sobre contenido digital.</p>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAHA7z_H5Ng/VsrTJFutkzbxdlddaWhk6Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Matriz de Planeacion
+                    </h3>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAHBl4acX18/O8bgOC0KvhC_Vy_Od4JglA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FASE 2 -->
+        <section id="fase2" class="contenido-seccion d-none">
+            <h2 class="text-center mb-4">Fase 2 – Inteligencia Artificial y Programación Educativa</h2>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Gastos economicos de la IA
+                    </h3>
+                    <p>Infografia explicativa hecha con apoyo de la IA. Tener en cuenta el ejercicio evaluativo disponible al final.</p>
+                    <div style="width: 100%;">
+                        <div style="position: relative; padding-bottom: 200%; padding-top: 0; height: 0;">
+                            <iframe title="GASTOS ECONÓMICOS DE LA IA" frameborder="0" width="800" height="1600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/69a2ddd88cd01024f6133fe0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Costos de la IA
+                    </h3>
+                    <p>Video segun la presentacion anterior.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7w4ALa8nwgw?si=UfQbt5J9OAQ-_tDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Infografia + Diseño de prompts educativos + Recursos de texto con IA + Recursos visuales con IA
+                    </h3>
+                    <p>Infografia en donde, aparte de la informacion consultada, se muestran los prompts utilizados para el proceso de creacion.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="documentos/Prompts y Bibliografia - IA y Sostenibilidad - Ramirez Joseph.pdf" width="100%" height="600px" style="border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-3">
+                            Actividad de programación creativa
+                        </h3>
+                        <div class="ratio ratio-4x3">
+                            <iframe src="https://scratch.mit.edu/projects/1287718430/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCRATCH -->
+        <section id="scratch" class="contenido-seccion d-none">
+            <h2 class="text-center mb-5">Proyectos Scratch</h2>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Mapa Conceptual de Scratch
+                    </h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="documentos/Mapa conceptual - Scratch - Ramirez Joseph.pdf" width="100%" height="600px" style="border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Sistema Solar</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1297972768/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Quiz Matematico</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1297579732/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Cuento</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1298698704/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Ortografia</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1298801703/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Laboratorio</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1298909895/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-3">Parcial 2do Corte</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe src="https://scratch.mit.edu/projects/1312645469/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP INVENTOR -->
+        <section id="appinventor" class="contenido-seccion d-none">
+            <h2 class="text-center mb-4">App Inventor</h2>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Mapa Mental App Inventor
+                    </h3>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAHGLZh286Y/VgkXWiaqNNBpdiBwEjLfTA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">
+                        Diapositivas App Inventor
+                    </h3>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAHGLRhFY_k/t3JKdBAyfsK-HXlJycbYrQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Mi Primer App</h3>
+                    <img src="imagenes/miprimerapp.png" alt="Captura de MiPrimerApp" class="img-fluid rounded shadow mb-3">
+                    <p>Test sencillo.</p>
+                    <a href="APKs/MiPrimeraApp.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/MiPrimeraApp.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Brujula</h3>
+                    <img src="imagenes/brujula.png" alt="Captura de Brujula" class="img-fluid rounded shadow mb-3">
+                    <p>Gira tu celular para girar la brujula.</p>
+                    <a href="APKs/EjercicioBrujula_RamirezMonsalveJosephAlejandro_1096700962.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/EjercicioBrujula_RamirezMonsalveJosephAlejandro_1096700962.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Registros de Lista</h3>
+                    <img src="imagenes/registrolista.png" alt="Captura de Registros de Lista" class="img-fluid rounded shadow mb-3">
+                    <p>Test para una base de datos local.</p>
+                    <a href="APKs/RegistrosDeLista.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/RegistrosDeLista.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Base de Datos TinyDB</h3>
+                    <img src="imagenes/tinydb.png" alt="Captura de TinyDB" class="img-fluid rounded shadow mb-3">
+                    <p>Test para una base de datos usando TinyDB.</p>
+                    <a href="APKs/BaseDatosTinyDB.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/BaseDatosTinyDB.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Login Firebase</h3>
+                    <img src="imagenes/firebase.png" alt="Captura de Firebase" class="img-fluid rounded shadow mb-3">
+                    <p>Test para iniciar sesion usando FireBase.</p>
+                    <a href="APKs/LoginFirebaseV3.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/LoginFirebaseV3.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Parcial Corte 2</h3>
+                    <img src="imagenes/parcial2.png" alt="Captura de segundo parcial" class="img-fluid rounded shadow mb-3">
+                    <p>Parcial para el corte 2.</p>
+                    <a href="APKs/ParcialCorte2_RamirezMonsalveJoseph1096700962.apk" download class="btn btn-primary"> Descargar APK</a>
+                    <a href="AIAs/ParcialCorte2_RamirezMonsalveJoseph1096700962.aia" download class="btn btn-primary"> Descargar AIA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFLEXIONES Y APRENDIZAJES -->
+        <section id="reflexiones" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Reflexiones y Aprendizajes</h2>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Reflexión crítica por Fase 1:</strong><br>
+                                Escribe aquí tu análisis sobre lo aprendido, lo que te costó y lo que aportó esta fase.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Reflexión crítica por Fase 2:</strong><br>
+                                Escribe aquí tu reflexión sobre IA, prompts y recursos generados con tecnología.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Reflexión crítica por Scratch:</strong><br>
+                                Escribe aquí tu reflexión sobre pensamiento lógico, secuencias, interacción y juego educativo.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Reflexión crítica por App Inventor:</strong><br>
+                                Escribe aquí tu reflexión sobre el diseño de aplicaciones, prototipos y utilidad pedagógica.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="template-box">
+                                <strong>Aprendizajes más significativos:</strong><br>
+                                Escribe aquí los aprendizajes que más marcaron tu proceso.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="template-box">
+                                <strong>Dificultades superadas:</strong><br>
+                                Describe aquí los retos que enfrentaste y cómo los resolviste.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="template-box">
+                                <strong>Conexión con el perfil profesional:</strong><br>
+                                Explica aquí cómo lo aprendido se relaciona con tu formación y tu futuro laboral.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCLUSIONES -->
+        <section id="conclusiones" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Conclusiones</h2>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Síntesis del proceso formativo:</strong><br>
+                                Resume aquí el recorrido general del semestre.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Competencias consolidadas:</strong><br>
+                                Escribe aquí las competencias que fortaleciste de manera más clara.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Propuesta de mejora:</strong><br>
+                                Señala aquí qué mejorarías en futuras versiones del portafolio o de tu trabajo.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Proyección profesional:</strong><br>
+                                Explica aquí cómo aplicarás estas habilidades en tu vida profesional.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUTOEVALUACIÓN -->
+        <section id="autoevaluacion" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Autoevaluación</h2>
+                    <p class="mb-4">Completa esta sección con una valoración cuantitativa y una reflexión cualitativa.</p>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="template-box text-center h-100">
+                                <strong>Puntaje general</strong><br>
+                                [__ / 5]<br>
+                                [__ / 100]
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="template-box h-100">
+                                <strong>¿Qué aprendí?</strong><br>
+                                Escribe aquí tu respuesta.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="template-box h-100">
+                                <strong>¿Qué mejoraría?</strong><br>
+                                Escribe aquí tu respuesta.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="template-box">
+                        <strong>¿Cómo aplico esto en mi vida profesional?</strong><br>
+                        Escribe aquí cómo aplicarás lo aprendido en proyectos, trabajos o estudios futuros.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCIAS Y HERRAMIENTAS -->
+        <section id="referencias" class="contenido-seccion d-none">
+            <div class="card shadow border-0 mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="mb-4">Referencias y Herramientas</h2>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Herramientas digitales utilizadas:</strong><br>
+                                Canva<br>
+                                Genially<br>
+                                Scratch<br>
+                                MIT App Inventor<br>
+                                YouTube<br>
+                                [Agrega aquí otras herramientas]
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="template-box h-100">
+                                <strong>Recursos de IA utilizados:</strong><br>
+                                [Nombre de IA 1]<br>
+                                [Nombre de IA 2]<br>
+                                [Nombre de IA 3]
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="template-box">
+                                <strong>URLs empleadas:</strong><br>
+                                [Pega aquí los enlaces de los recursos usados]
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="template-box">
+                                <strong>Referencias bibliográficas en APA 7:</strong><br>
+                                [Autor, A. A. (Año). Título. Editorial o URL.]<br>
+                                [Autor, B. B. (Año). Título. Editorial o URL.]<br>
+                                [Agrega todas las referencias necesarias]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-white text-center py-3">
+        <p class="mb-0">Portafolio Digital · Plantilla editable</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javaPortafolio.js"></script>
+</body>
+</html>
